@@ -1,6 +1,8 @@
 node {
   stage('Preparation') {
-    checkout scm
+    dir('git-repo') {
+      checkout scm
+    }
    }
    stage('sync'){
    sh '''
